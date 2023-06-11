@@ -7,10 +7,13 @@
  * 
 */
 
-function factorial(n) {
-    // Напишите код здесь
+function factorial(n){
+  let result = 1;
+  while(n){
+      result *= n--;
+  }
+  return result;
 }
-
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(factorial(0)); // 1

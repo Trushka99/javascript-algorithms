@@ -7,7 +7,17 @@
 */
 
 function primes(num) {
-    // Напишите код здесь
+let nonPrimes = [];
+let primes = [];
+for (let i = 2; i <= num; i++){
+    if(!nonPrimes[i]) {
+        primes.push(i);
+        for(let j = i*2; j <=num; j+= i){
+            nonPrimes[j] = true;
+        }
+    }
+}
+return primes
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
